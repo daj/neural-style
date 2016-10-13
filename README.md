@@ -20,12 +20,11 @@ seems to be around 3x slower than implementations using Torch.
 Basic usage:    
 `python neural_style.py --content <content file> --styles <style file> --output <output file>`
 
-To save checkpoint images:    
-`python neural_style.py --content <content file> --styles <style file> --output <output file> --checkpoint-output <output format, e.g. output%s.jpg> --checkpoint-iterations <checkpoint frequency>`
-
 Run `python neural_style.py --help` to see a list of all options.
 
-The default number of iterations is 1000, which takes around 10 hours to run on a Mid 2013 Macbook Air for a 528×960 pixel content image.  You can change the number of iterations using the `--iterations` parameter.
+Use `--checkpoint-output` and `--checkpoint-iterations` to save checkpoint images.
+
+Use `--iterations` to change the number of iterations (default 1000).  For a 512×512 pixel content file, 1000 iterations take 2.5 minutes on a GeForce GTX Titan X GPU, or 90 minutes on an Intel Core i7-5930K CPU.
 
 ## Example 1
 
@@ -69,7 +68,11 @@ style blend weight of 0.2:
 * [NumPy](https://github.com/numpy/numpy/blob/master/INSTALL.rst.txt)
 * [SciPy](https://github.com/scipy/scipy/blob/master/INSTALL.rst.txt)
 * [Pillow](http://pillow.readthedocs.io/en/3.3.x/installation.html#installation)
+<<<<<<< HEAD
 * [Pre-trained VGG network][net] (MD5 `8ee3263992981a1d26e73b3ca028a123`) - put it in the top level of this repository, or specify its location using the `--network` parameter.
+=======
+* [Pre-trained VGG network][net] (MD5 `8ee3263992981a1d26e73b3ca028a123`) - put it in the top level of this repository, or specify its location using the `--network` option.
+>>>>>>> 9f9f9bb... List more of the command line options
 
 ## License
 
